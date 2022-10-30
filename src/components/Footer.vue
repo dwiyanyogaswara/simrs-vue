@@ -12,7 +12,7 @@ export default {
 
 <style>
 .footer {
-    background-color: #075eff;
+    background-color: hsl(113, 100%, 41%);;
     padding: 5px;
     overflow: hidden;
     position: fixed;
