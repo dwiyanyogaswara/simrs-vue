@@ -11,7 +11,7 @@
             </ul> -->
             <div id="menu">
                 <div id="menulist" v-for="item in menu" :key="item.id" @click="setActiveMenu(item.id)" @mouseenter="showChild=true" :class="{activeMenu : activeMenuId == item.id}"> {{ item.text }}
-                    <div v-if="showChild">
+                    <div id="childbox" v-if="showChild">
                         <div id="childlist" v-for="child in item.child" :key="child.id" @mouseleave="showChild=false" >{{ child.text }}</div>
                     </div>
                 </div>
@@ -86,13 +86,18 @@ ul {
     border-bottom: solid 1px;
     border-bottom-color: #636363;
     padding: 2% 5% 2% 5%;
+    position:relative;
 }
-#childlist{
+#childbox{
     background-color: #3a9a00;
     border-top: solid 1px;
     position: absolute;
     left: 100%;
     margin-top: -15%;
+    width: 100%;
+}
+#childlist{
+    padding: 2% 5% 2% 5%;
 }
 #childlist:hover{
     background-color: rgb(75, 75, 75);
