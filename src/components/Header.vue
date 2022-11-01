@@ -93,7 +93,7 @@ ul {
     border-top: solid 1px;
     position: absolute;
     left: 100%;
-    margin-top: -15%;
+    top: -5%;
     width: 100%;
 }
 #childlist{
